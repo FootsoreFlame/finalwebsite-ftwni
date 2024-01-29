@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap');
+
+* {
+    padding:0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Gaegu', sans-serif;
+}
+html{
+    height: 100%;
+    width: 100%;
+   } 
+body {
+    background-color: #f7f7e6;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+header {
+  background-color: #f7f7e6;
+  height: 21px;
+  text-align: left;
+  padding: 1.1% 1% 3%;
+  font-size: 1.67vw;
+  margin-top:0%;
+  position: fixed; /* Position the header absolutely within the body */
+  width: 100%; /* Ensure the header spans the full width */
+  z-index: 3; /* Set a higher z-index to place it above other elements */
+  border-bottom: 2px solid #000000; /* Add a black border at the bottom */
+}
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+}
+.wrapper .icon {
+    position: relative;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 12%;
+    margin: 15px 5px 15px;
+    margin-left: 16px;
+    width: 35px;
+    height: 35px;
+    font-size: 1.65vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+    background: #ffffff;
+    color: #000000;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .icon:hover span,
+    .wrapper .icon:hover .tooltip {
+      text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+    }
+    .wrapper .twitter:hover,
+    .wrapper .twitter:hover .tooltip,
+    .wrapper .twitter:hover .tooltip::before {
+      background: #1DA1F2;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .wrapper .instagram:hover,
+    .wrapper .instagram:hover .tooltip,
+    .wrapper .instagram:hover .tooltip::before {
+      background: #E4405F;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .wrapper .github:hover,
+    .wrapper .github:hover .tooltip,
+    .wrapper .github:hover .tooltip::before {
+      background: #333333;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .wrapper .youtube:hover,
+    .wrapper .youtube:hover .tooltip,
+    .wrapper .youtube:hover .tooltip::before {
+      background: #CD201F;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .social-icons-container {
+        position: absolute;
+        top: 0;
+        right: 40px;
+        padding: 1% 3%;
+        margin-top: -1.1%;
+    }
+
+    #main-header a {
+      color: rgb(0, 0, 0); /* Change the color for normal state */
+      text-decoration: none; /* Remove default underline */
+      padding: 1px; /* Add padding for spacing */
+      margin: 0px 16px 0px;
+      position: relative; /* Add relative positioning to create a positioning context */
+      display: inline-block; /* Make the link behave as a block element to apply padding and border */
+  }
+  
+  #main-header a::after {
+    content: ""; /* Create an empty content pseudo-element */
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Center the border relative to the text */
+    width: 0;
+    height: 2px; /* Set the height of the border */
+    background-color: #5d5d5d; /* Color of the border */
+  }
+  
+  /* Hover state */
+  #main-header a:hover::after {
+      width: 100%; /* Set the width when hovering to 100% of the text width */
+      background-color: #dadada; /* Add background color on hover */
+  }
+  
+  #main-header a:hover {
+      color: #787878; /* Change the color for hover state */
+      
+  }
+  
+  /* Visited state */
+  #main-header a:visited {
+      color: #000000; /* Change the color for visited state */
+  }
+  
+  /* Active state (when clicked) */
+  #main-header a:active {
+      color: #ffffff; /* Change the color for active state */
+  }
+   /* Normal state */
+   .link-container-wide {
+      width: 820px;
+      display: inline-block;
+    }
+    .link-container-narrow {
+      margin-top: -7px;
+      width: px;
+      display: inline-block;
+  }
+  .quote-container { 
+    height: 20vh;
+    width: 100%;
+    background: #f7f7e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    padding: 48px;
+    box-sizing: border-box;
+    margin-bottom: 20%;
+  }
+  
+  .quote-container .quote {
+    max-width: 700px;
+    position: relative;
+  }
+  
+  .quote-container .quote-icon {
+    position: absolute;
+    left: -76px;
+    top: -48px;
+    transform: scale(1.5) rotateZ(5deg);
+    opacity: 0.1;
+  }
+  
+  .quote-container .quote-content {
+    font-weight: bold;
+    font-size: 2.5vw;
+    color: #000000;
+  }
+  
+  .quote-container .quote-author {
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: #000000;
+    border-top: 2px solid #000000;
+    padding: 16px 32px;
+    margin-top: 20px;
+    margin-left: -4.5%;
+  }
+  
+  .quote-container .new-quote-btn {
+    padding: 16px 36px;
+    position: absolute;
+    bottom: -45%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000000;
+    color: #ffffff;
+    font-size: 2vw;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 500ms ease;
+    border-radius: 7%;
+  }
+  
+  .quote-container .new-quote-btn:hover {
+    background: #616161;
+  }
+  
+  @media (max-width: 900px) {
+    .quote-container .quote-icon {
+      left: -16px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .quote-container .quote-content {
+      font-size: 24px;
+      line-height: 1.8;
+      text-align: center;
+    }
+  }
+  h1 {
+    margin-bottom: -.5%;
+    margin-right: 60%;
+    position: relative;
+    font-size: 5vw;
+}
+  h2 {
+    margin-bottom: -7%;
+    margin-right: 57.5%;
+    position: relative;
+    font-size: 5vw;
+}
+h3 {
+  margin-top: 8%;
+  margin-right: -4.5%;
+  position: relative;
+  font-size: 2.4vw;
+  margin-bottom: 0%;
+}
+
+/* Centering h2 and h3 */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150vh;
+}
+
+.container h2,
+.container h3 {
+    text-align: left;
+    margin-left: 5%; /* Adjust the left margin as needed */
+}

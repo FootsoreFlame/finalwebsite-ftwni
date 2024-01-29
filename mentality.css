@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap');
+
+* {
+    padding:0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Gaegu', sans-serif;
+}
+html{
+    height: 100%;
+    width: 100%;
+   } 
+body {
+    background-color: #f7f7e6;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+header {
+    background-color: #f7f7e6;
+    height: 21px;
+    text-align: left;
+    padding: 1.1% 1% 3%;
+    font-size: 1.67vw;
+    margin-top:0%;
+    position: fixed; /* Position the header absolutely within the body */
+    width: 100%; /* Ensure the header spans the full width */
+    z-index: 3; /* Set a higher z-index to place it above other elements */
+    border-bottom: 2px solid #000000; /* Add a black border at the bottom */
+}
+h1 {
+  margin-top: 10%;
+  margin-left: -59.5%;
+  font-size: 5vw;
+}
+h2 {
+  margin-top: 1.5%;
+  margin-left: 8.5%;
+  margin-bottom: 0%;
+  font-size: 2.4vw;
+  text-align: left;
+  white-space: pre-line;
+  line-height: 1.2; /* Adjust the line-height as needed */
+  display: inline-block;
+  text-align: left;
+  position: sticky;
+}
+h3 {
+  margin-top: .5%;
+  margin-left: -46%;
+  font-size: 5vw;
+}
+.top-right-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    /* Add additional styling as needed */
+}
+
+.container {
+    text-align: center;
+    overflow: hidden;
+    position: relative; /* Add relative positioning to create a positioning context */
+    z-index: 2; /* Set a z-index higher than the background image */
+}
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 12%;
+  margin: 15px 5px 15px;
+  margin-left: 16px;
+  width: 35px;
+  height: 35px;
+  font-size: 1.65vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip {
+position: absolute;
+top: 0;
+font-size: 14px;
+  background: #ffffff;
+  color: #000000;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+  }
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background: #1DA1F2;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: #E4405F;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .wrapper .github:hover,
+  .wrapper .github:hover .tooltip,
+  .wrapper .github:hover .tooltip::before {
+    background: #333333;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .wrapper .youtube:hover,
+  .wrapper .youtube:hover .tooltip,
+  .wrapper .youtube:hover .tooltip::before {
+    background: #CD201F;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .social-icons-container {
+      position: absolute;
+      top: 0;
+      right: 40px;
+      padding: 1% 3%;
+      margin-top: -1.1%;
+  }
+
+#main-header a {
+    color: rgb(0, 0, 0); /* Change the color for normal state */
+    text-decoration: none; /* Remove default underline */
+    padding: 1px; /* Add padding for spacing */
+    margin: 0px 16px 0px;
+    position: relative; /* Add relative positioning to create a positioning context */
+    display: inline-block; /* Make the link behave as a block element to apply padding and border */
+}
+
+#main-header a::after {
+    content: ""; /* Create an empty content pseudo-element */
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Center the border relative to the text */
+    width: 0;
+    height: 2px; /* Set the height of the border */
+    background-color: #5d5d5d; /* Color of the border */
+}
+
+/* Hover state */
+#main-header a:hover::after {
+    width: 100%; /* Set the width when hovering to 100% of the text width */
+    background-color: #dadada; /* Add background color on hover */
+}
+
+#main-header a:hover {
+    color: #787878; /* Change the color for hover state */
+}
+
+/* Visited state */
+#main-header a:visited {
+    color: #000000; /* Change the color for visited state */
+}
+
+/* Active state (when clicked) */
+#main-header a:active {
+    color: #ffffff; /* Change the color for active state */
+}
+ /* Normal state */
+ .link-container-wide {
+    width: 507px;
+    display: inline-block;
+  }
+  .link-container-narrow {
+    margin-top: -7px;
+    width: px;
+    display: inline-block;
+}
+
+  a {
+    color: #000000; /* Change the color for normal state */
+    text-decoration: none; /* Remove default underline */
+    padding: 5px; /* Add padding for spacing */
+    position: relative; /* Add relative positioning to create a positioning context */
+    display: inline-block; /* Make the link behave as a block element to apply padding and border */
+  }
+
+  a::after {
+    content: ""; /* Create an empty content pseudo-element */
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Set the height of the underline */
+    background-color: #5d5d5d; /* Color of the underline */
+  }
+
+  /* Hover state */
+  .link-container:hover {
+    border: 2px solid #787878; /* Add a box around the text on hover */
+    background-color: #dadada; /* Add background color on hover */
+  }
+
+  a:hover {
+    color: rgb(255, 255, 255); /* Change the color for hover state */
+  }
+
+  /* Visited state */
+  a:visited {
+    color: #000000; /* Change the color for visited state */
+  }
+
+  /* Active state (when clicked) */
+  a:active {
+    color: #fffff3; /* Change the color for active state */
+  }
+  .container img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5%;
+    width:25%;
+    max-width: 100%; /* This ensures the image doesn't exceed the container width */
+    height: auto;   /* This maintains the image's aspect ratio */
+    flex-direction: row;
+}
